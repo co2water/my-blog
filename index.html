@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我的个人博客</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -23,7 +24,7 @@
 
     <main>
         <section id="home" class="hero">
-            <div class="container">
+            <div class="container fade-in">
                 <h2>欢迎来到我的个人博客</h2>
                 <p>分享技术、生活和思考</p>
             </div>
@@ -31,16 +32,16 @@
 
         <section id="about" class="about">
             <div class="container">
-                <h2>关于我</h2>
-                <p>我是一名热爱技术的开发者，喜欢记录和分享学习过程中的点点滴滴。这个博客是我的个人空间，用来记录技术笔记、生活感悟和有趣的想法。</p>
+                <h2 class="fade-in">关于我</h2>
+                <p class="slide-in-left">我是一名热爱技术的开发者，喜欢记录和分享学习过程中的点点滴滴。这个博客是我的个人空间，用来记录技术笔记、生活感悟和有趣的想法。</p>
             </div>
         </section>
 
         <section id="blog" class="blog">
             <div class="container">
-                <h2>最新文章</h2>
+                <h2 class="fade-in">最新文章</h2>
                 <div class="blog-grid">
-                    <article class="blog-card">
+                    <article class="blog-card scale-in">
                         <div class="blog-image">
                             <div class="placeholder-img">📝</div>
                         </div>
@@ -52,7 +53,7 @@
                         </div>
                     </article>
 
-                    <article class="blog-card">
+                    <article class="blog-card scale-in">
                         <div class="blog-image">
                             <div class="placeholder-img">💻</div>
                         </div>
@@ -64,7 +65,7 @@
                         </div>
                     </article>
 
-                    <article class="blog-card">
+                    <article class="blog-card scale-in">
                         <div class="blog-image">
                             <div class="placeholder-img">🚀</div>
                         </div>
@@ -76,7 +77,7 @@
                         </div>
                     </article>
 
-                    <article class="blog-card">
+                    <article class="blog-card scale-in">
                         <div class="blog-image">
                             <div class="placeholder-img">🎨</div>
                         </div>
@@ -93,9 +94,9 @@
 
         <section id="contact" class="contact">
             <div class="container">
-                <h2>联系我</h2>
-                <p>如果你有任何问题或想法，欢迎通过以下方式联系我：</p>
-                <div class="contact-info">
+                <h2 class="fade-in">联系我</h2>
+                <p class="fade-in">如果你有任何问题或想法，欢迎通过以下方式联系我：</p>
+                <div class="contact-info slide-in-right">
                     <p>📧 Email: your.email@example.com</p>
                     <p>🐙 GitHub: github.com/yourusername</p>
                     <p>💼 LinkedIn: linkedin.com/in/yourprofile</p>
