@@ -1,290 +1,192 @@
+'use client'
+
+import { useLang } from '@/components/LangContext'
+
+const t = {
+  en: {
+    badge: 'The Story',
+    name: 'Sam Lee',
+    role: 'Head of Mobile SW & TW General Manager @ Nothing',
+    intro: 'A technology executive who doesn\'t just manage teams — he builds them from zero. Who doesn\'t just adopt AI — he patents it. Who doesn\'t just ship products — he creates the revenue engine behind them.',
+    ch1title: 'The Builder',
+    ch1period: '2011 – 2015',
+    ch1p1: 'Every executive starts somewhere. Mine started at HTC, hands-on as a Wireless System Engineer — serving as Modem Major Owner for flagship devices like HTC One M8 and HTC Butterfly. Deployed on-site in the U.S. and Japan to ensure technical acceptance was achieved on time, every time.',
+    ch1p2: 'This wasn\'t management. This was the trenches. And it taught me something no MBA ever could: great products are delivered through relentless execution on the ground.',
+    ch2title: 'The Scaler',
+    ch2period: '2015 – 2021',
+    ch2p1: 'At OnePlus, I was given a blank canvas: build the global Carrier Product and Technical Account Management department from nothing. Over 5 years and 9 months, I turned that canvas into a machine — launching products with T-Mobile, Verizon, Vodafone, EE, Jio, and CMCC across three continents.',
+    ch2p2: 'I secured OnePlus\'s first PTCRB, Wi-Fi Logo, and GCF certifications. Led procurement of conformance test equipment that significantly reduced external certification costs. Developed carrier business strategies and served as the primary technical representative in top-level partner meetings.',
+    ch2p3: 'Then at OPPO, I spearheaded the North American product strategy — managing RFP/RFI processes, annual sales plans, and full product line P&L.',
+    ch3title: 'The Transformer',
+    ch3period: '2022 – Present',
+    ch3p1: 'At Nothing, I wear two hats: Head of Mobile SW and TW General Manager. I built the entire Mobile SW organization from the ground up — 150+ people across in-house (100+) and outsourced (50+) teams, spanning Android application development, AWS cloud infrastructure management, and CI/CD pipeline operations.',
+    ch3p2: 'On the infrastructure side, I established a dual-track engineering system: Gerrit + Jenkins for on-premise builds and GitHub + AWS for cloud-side deployment — giving the team both the stability of traditional workflows and the agility of modern DevOps.',
+    ch3p3: 'On the revenue side, I built Nothing OS software monetization from zero — creating revenue streams through pre-install partnerships, advertising integration, and subscription services (upcoming). Full P&L ownership with measurable profit delivery.',
+    ch3p4: 'But the real transformation is happening now. While most enterprises debate "should we use AI?", I\'m asking a different question: "How do we make AI the central nervous system of the entire development lifecycle?" This led to the creation of the AIDLC framework, 5 AI Agent patent applications, and a fundamental rethinking of how teams, tools, and processes interconnect.',
+    patentsTitle: 'AI Agent Patent Portfolio',
+    patentsSub: 'All patents pending',
+    patentsDesc: 'Five patent applications covering the full spectrum of AI Agent innovation — from individual specialized agents to multi-agent orchestration systems.',
+    eduTitle: 'Education',
+    eduSchool: 'National Taiwan University of Science and Technology',
+    eduDegree: 'Master of Electronic and Computer Engineering',
+    eduResearch: 'Research: Hybrid Evolutionary Algorithm for Multi-radio, Multi-channel Wireless Mesh Networks',
+    ctaTitle: 'The Next Chapter',
+    ctaSub: 'From builder to scaler to transformer — the journey continues. Let\'s write the next chapter together.',
+    ctaBtn: 'Connect with Sam Lee',
+  },
+  zh: {
+    badge: '我的故事',
+    name: 'Sam Lee',
+    role: 'Nothing 移动软件负责人 & 台湾总经理',
+    intro: '一位不只管理团队，而是从零建立团队的技术高管。不只采用 AI，而是为之申请专利。不只发布产品，而是构建产品背后的营收引擎。',
+    ch1title: '建设者',
+    ch1period: '2011 – 2015',
+    ch1p1: '每位高管都有起点。我的起点在 HTC，作为无线系统工程师，负责旗舰设备（HTC One M8、HTC Butterfly）的基带芯片模块。在美国和日本驻点确保技术验收按时完成。',
+    ch1p2: '这不是管理，这是前线。它教会了我一件 MBA 永远教不会的事：卓越的产品是在一线用汗水交付出来的。',
+    ch2title: '扩展者',
+    ch2period: '2015 – 2021',
+    ch2p1: '在 OnePlus，我从零建立了全球运营商产品和技术客户管理部门。在近 6 年间，将产品推进 T-Mobile、Verizon、Vodafone、EE、Jio、CMCC 等全球顶级运营商，覆盖三大洲。',
+    ch2p2: '获得 OnePlus 首个 PTCRB、Wi-Fi Logo 和 GCF 认证，并通过采购一致性测试设备显著降低认证成本。制定运营商业务策略，并作为高层合作伙伴会议的首席技术代表。',
+    ch2p3: '随后在 OPPO 主导北美产品策略——管理 RFP/RFI 流程、年度销售计划及完整产品线损益。',
+    ch3title: '变革者',
+    ch3period: '2022 – 至今',
+    ch3p1: '在 Nothing，我身兼 Mobile SW 负责人与台湾总经理双重角色。从零建立了 150+ 人的组织——涵盖 Android 开发、AWS 云基础设施管理和 CI/CD 流水线运维（内部 100+，外包 50+）。',
+    ch3p2: '在基础设施层面，我建立了双轨工程系统：Gerrit + Jenkins（本地构建）与 GitHub + AWS（云端部署）——兼顾传统工作流的稳定性和现代 DevOps 的敏捷性。',
+    ch3p3: '在营收层面，我从零构建了 Nothing OS 的软件变现体系——包含预装合作、广告整合和即将上线的订阅服务。完整的损益管理责任与可衡量的利润交付。',
+    ch3p4: '而真正的变革正在发生。当大多数企业还在讨论"要不要用 AI"时，我在思考一个不同的问题："如何让 AI 成为整个开发生命周期的中枢神经系统？"这催生了 AIDLC 框架、5 项 AI Agent 专利申请，以及对团队、工具和流程如何互联的根本性重新思考。',
+    patentsTitle: 'AI Agent 专利组合',
+    patentsSub: '全部专利申请中',
+    patentsDesc: '五项专利申请涵盖 AI Agent 创新的全方位——从独立的专业化代理人到多代理人编排系统。',
+    eduTitle: '教育背景',
+    eduSchool: '台湾科技大学',
+    eduDegree: '电子与计算机工程硕士',
+    eduResearch: '研究方向：多无线电多信道无线网状网络中的混合进化算法',
+    ctaTitle: '下一章',
+    ctaSub: '从建设者到扩展者再到变革者——旅程仍在继续。让我们一起书写下一章。',
+    ctaBtn: '联系 Sam Lee',
+  },
+}
+
+const patents = {
+  en: [
+    { title: 'AI Test Agent', desc: 'Autonomous AI agent capable of understanding test requirements, generating test cases, and executing test workflows with minimal human intervention.' },
+    { title: 'AI R&D Agent', desc: 'AI-powered development agent that interprets product requirements and generates implementation code through intelligent context understanding.' },
+    { title: 'AI Test Architect', desc: 'Strategic AI agent that designs end-to-end testing architectures, optimizes test coverage, and orchestrates testing infrastructure at scale.' },
+    { title: 'CI/CD Agent Deployment', desc: 'Intelligent deployment agent integrated into CI/CD pipelines for automated build management, environment provisioning, and release orchestration.' },
+    { title: 'Multi-Agent Collaboration', desc: 'Framework for orchestrating multiple specialized AI agents to work collaboratively through DAG-based task decomposition and parallel execution.' },
+  ],
+  zh: [
+    { title: 'AI 测试代理人', desc: '能够自主理解测试需求、生成测试用例并执行测试工作流的 AI 代理人，最小化人工干预。' },
+    { title: 'AI 研发代理人', desc: '通过智能上下文理解，解读产品需求并生成实现代码的 AI 研发代理人。' },
+    { title: 'AI 测试架构师', desc: '设计端到端测试架构、优化测试覆盖率并大规模编排测试基础设施的战略级 AI 代理人。' },
+    { title: 'CI/CD Agent 部署', desc: '集成到 CI/CD 流水线中的智能部署代理人，实现自动化构建管理、环境配置和发布编排。' },
+    { title: '多代理人协作管理', desc: '通过基于 DAG 的任务分解和并行执行，编排多个专业化 AI 代理人协作完成复杂任务的框架。' },
+  ],
+}
+
 export default function AboutPage() {
+  const { lang } = useLang()
+  const c = t[lang]
+  const p = patents[lang]
+
   return (
     <div className="gradient-mesh pt-24">
-      {/* Hero */}
       <section className="px-6 py-20">
         <div className="max-w-5xl mx-auto">
-          <span className="inline-block px-4 py-1.5 rounded-full border border-accent/30 text-accent text-xs font-mono tracking-widest uppercase mb-6">
-            About / 关于
-          </span>
-          <h1 className="font-display font-extrabold text-4xl md:text-6xl text-ivory leading-tight mb-6">
-            Sam Lee
-          </h1>
-          <p className="text-accent text-lg font-medium mb-6">
-            Head of Mobile SW & TW General Manager @ Nothing
-          </p>
-          <p className="text-silver text-xl leading-relaxed max-w-3xl mb-4">
-            A technology executive who has spent 15 years learning one fundamental truth: <strong className="text-ivory">the best technology means nothing without the right team, the right process, and the right strategy to bring it to market.</strong>
-          </p>
-          <p className="text-steel text-lg leading-relaxed max-w-3xl">
-            一位用 15 年时间验证了一个核心真理的技术高管：<strong className="text-ivory/80">再好的技术，没有对的团队、对的流程、对的市场策略，都毫无意义。</strong>
-          </p>
+          <span className="inline-block px-4 py-1.5 rounded-full border border-accent/30 text-accent text-xs font-mono tracking-widest uppercase mb-6">{c.badge}</span>
+          <h1 className="font-display font-extrabold text-4xl md:text-6xl text-ivory leading-tight mb-4">{c.name}</h1>
+          <p className="text-accent text-lg font-medium mb-6">{c.role}</p>
+          <p className="text-silver text-xl leading-relaxed max-w-3xl">{c.intro}</p>
         </div>
       </section>
 
       <div className="glow-line max-w-5xl mx-auto" />
 
-      {/* Chapter 1: The Builder */}
-      <section id="builder" className="px-6 py-20">
+      {/* Chapter 1 */}
+      <section id="chapter-builder" className="px-6 py-20">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-4 mb-8">
-            <span className="text-accent font-mono text-sm">Chapter 01</span>
-            <div className="h-px flex-1 bg-accent/20" />
-          </div>
-          <h2 className="font-display font-bold text-3xl md:text-4xl text-ivory mb-2">
-            The Builder
-          </h2>
-          <p className="text-steel text-lg mb-10">建设者 — 从零到一</p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              <p className="text-silver text-base leading-relaxed">
-                In 2011, I started as a Wireless System Engineer at HTC, serving as the Modem Major Owner for flagship devices like the HTC One M8 and HTC Butterfly. I was deployed on-site in the U.S. and Japan to ensure Technical Acceptance — working directly with Verizon, Sprint, and KDDI.
-              </p>
-              <p className="text-silver text-base leading-relaxed">
-                That experience taught me something no classroom could: <strong className="text-ivory">great products are not just designed — they are delivered through sweat on the ground, in carrier labs, at 2 AM, debugging modem crashes.</strong>
-              </p>
-              <p className="text-silver text-base leading-relaxed">
-                This conviction shaped everything that followed. When I joined Nothing in 2022 as Head of Mobile SW and TW General Manager, I built the entire Mobile Software team from scratch — first in Shenzhen, then in Taiwan. Today, that organization has grown to <strong className="text-accent">150+ people</strong>: 100+ internal engineers and 50+ outsourced partners, spanning Android development, AWS cloud infrastructure, and CI/CD pipeline operations.
-              </p>
-            </div>
-            <div className="space-y-6">
-              <p className="text-steel text-sm leading-relaxed">
-                2011 年，我以 Wireless System Engineer 的身份加入 HTC，担任旗舰设备 HTC One M8 和 HTC Butterfly 的 Modem 主负责人。被派驻美国和日本，与 Verizon、Sprint、KDDI 直接合作确保技术验收。
-              </p>
-              <p className="text-steel text-sm leading-relaxed">
-                那段经历教会了我一件课堂上学不到的事：<strong className="text-ivory/60">好的产品不仅仅是设计出来的——它们是在运营商实验室里、在凌晨两点、在调试 modem crash 的过程中交付出来的。</strong>
-              </p>
-              <p className="text-steel text-sm leading-relaxed">
-                2022 年加入 Nothing 后，我从零建立了整个 Mobile SW 团队——先是深圳，然后是台湾。如今这个组织已成长为 <strong className="text-accent/80">150+ 人</strong>的团队：100+ 内部工程师和 50+ 外包伙伴，涵盖 Android 开发、AWS 云基础设施和 CI/CD 流水线运维。
-              </p>
+            <div className="w-12 h-12 rounded-xl bg-accent/10 border border-accent/30 flex items-center justify-center font-display font-bold text-accent text-lg">01</div>
+            <div>
+              <h2 className="font-display font-bold text-2xl md:text-3xl text-ivory">{c.ch1title}</h2>
+              <p className="text-steel text-sm">{c.ch1period}</p>
             </div>
           </div>
-
-          {/* Key metrics for this chapter */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
-            {[
-              { value: '150+', label: 'Team Members', labelZh: '团队成员' },
-              { value: '100+', label: 'Internal Engineers', labelZh: '内部工程师' },
-              { value: '50+', label: 'Outsourced Partners', labelZh: '外包伙伴' },
-              { value: '2', label: 'Offices Built', labelZh: '办公室从零建立' },
-            ].map((m) => (
-              <div key={m.label} className="bg-carbon/40 rounded-xl p-5 border border-white/5 text-center">
-                <div className="font-display font-extrabold text-2xl text-accent">{m.value}</div>
-                <div className="text-silver text-xs mt-1">{m.label}</div>
-                <div className="text-steel text-[10px] mt-0.5">{m.labelZh}</div>
-              </div>
-            ))}
+          <div className="bg-carbon/60 rounded-2xl p-8 border border-white/5">
+            <p className="text-silver text-base leading-relaxed mb-6">{c.ch1p1}</p>
+            <p className="text-silver text-base leading-relaxed"><em className="text-accent">{c.ch1p2}</em></p>
           </div>
+        </div>
+      </section>
 
-          {/* Team scope detail */}
-          <div className="mt-8 bg-carbon/40 rounded-2xl p-6 border border-white/5">
-            <h4 className="font-display font-semibold text-base text-ivory mb-4">Organization Scope <span className="text-steel font-normal text-sm ml-2">组织范围</span></h4>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {[
-                { icon: '📱', title: 'Android Development', titleZh: 'Android 开发', desc: 'Nothing OS, CMF Phone series, system applications' },
-                { icon: '☁️', title: 'AWS Infrastructure', titleZh: 'AWS 基础设施', desc: 'Cloud operations, service deployment, enterprise-side GitHub workflows' },
-                { icon: '🔄', title: 'CI/CD Operations', titleZh: 'CI/CD 运维', desc: 'Gerrit + Jenkins (on-premise), GitHub-based deployment (AWS)' },
-              ].map((s) => (
-                <div key={s.title} className="flex gap-3">
-                  <span className="text-xl shrink-0">{s.icon}</span>
-                  <div>
-                    <p className="text-ivory text-sm font-medium">{s.title}</p>
-                    <p className="text-accent/60 text-xs">{s.titleZh}</p>
-                    <p className="text-steel text-xs mt-1">{s.desc}</p>
-                  </div>
+      {/* Chapter 2 */}
+      <section id="chapter-scaler" className="px-6 py-20 border-t border-white/5">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex items-center gap-4 mb-8">
+            <div className="w-12 h-12 rounded-xl bg-accent/10 border border-accent/30 flex items-center justify-center font-display font-bold text-accent text-lg">02</div>
+            <div>
+              <h2 className="font-display font-bold text-2xl md:text-3xl text-ivory">{c.ch2title}</h2>
+              <p className="text-steel text-sm">{c.ch2period}</p>
+            </div>
+          </div>
+          <div className="bg-carbon/60 rounded-2xl p-8 border border-white/5">
+            <p className="text-silver text-base leading-relaxed mb-6">{c.ch2p1}</p>
+            <p className="text-silver text-base leading-relaxed mb-6">{c.ch2p2}</p>
+            <p className="text-silver text-base leading-relaxed">{c.ch2p3}</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Chapter 3 */}
+      <section id="chapter-transformer" className="px-6 py-20 border-t border-white/5">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex items-center gap-4 mb-8">
+            <div className="w-12 h-12 rounded-xl bg-accent/10 border border-accent/30 flex items-center justify-center font-display font-bold text-accent text-lg">03</div>
+            <div>
+              <h2 className="font-display font-bold text-2xl md:text-3xl text-ivory">{c.ch3title}</h2>
+              <p className="text-steel text-sm">{c.ch3period}</p>
+            </div>
+          </div>
+          <div className="bg-carbon/60 rounded-2xl p-8 border border-white/5">
+            <p className="text-silver text-base leading-relaxed mb-6">{c.ch3p1}</p>
+            <p className="text-silver text-base leading-relaxed mb-6">{c.ch3p2}</p>
+            <p className="text-silver text-base leading-relaxed mb-6">{c.ch3p3}</p>
+            <p className="text-silver text-base leading-relaxed">{c.ch3p4}</p>
+          </div>
+        </div>
+      </section>
+
+      <div className="glow-line max-w-5xl mx-auto" />
+
+      {/* Patents */}
+      <section id="patents" className="px-6 py-20">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="font-display font-bold text-2xl md:text-3xl text-ivory mb-2">{c.patentsTitle}</h2>
+          <p className="text-steel text-sm mb-4">{c.patentsSub}</p>
+          <p className="text-silver text-sm leading-relaxed max-w-3xl mb-12">{c.patentsDesc}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {p.map((patent, i) => (
+              <div key={patent.title} className="card-hover rounded-2xl bg-carbon/60 p-6 relative overflow-hidden">
+                <div className="absolute top-4 right-4 text-accent/10 font-display font-extrabold text-5xl">{String(i + 1).padStart(2, '0')}</div>
+                <div className="relative">
+                  <div className="inline-block px-2 py-0.5 rounded-md bg-warm/10 text-warm text-[10px] font-mono uppercase tracking-wider mb-3">Patent Pending</div>
+                  <h3 className="font-display font-bold text-base text-ivory mb-3">{patent.title}</h3>
+                  <p className="text-silver text-sm leading-relaxed">{patent.desc}</p>
                 </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div className="glow-line max-w-5xl mx-auto" />
-
-      {/* Chapter 2: The Scaler */}
-      <section id="scaler" className="px-6 py-20">
-        <div className="max-w-5xl mx-auto">
-          <div className="flex items-center gap-4 mb-8">
-            <span className="text-accent font-mono text-sm">Chapter 02</span>
-            <div className="h-px flex-1 bg-accent/20" />
-          </div>
-          <h2 className="font-display font-bold text-3xl md:text-4xl text-ivory mb-2">
-            The Scaler
-          </h2>
-          <p className="text-steel text-lg mb-10">规模化者 — 从一到百</p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              <p className="text-silver text-base leading-relaxed">
-                At OnePlus, over 5 years and 9 months, I built and managed the entire global Carrier Product and Technical Account Management department from zero. We launched products with the world&apos;s largest carriers — <strong className="text-ivory">T-Mobile, Verizon, Vodafone, EE, Jio, CMCC</strong> — across the USA, Europe, India, and China.
-              </p>
-              <p className="text-silver text-base leading-relaxed">
-                I secured OnePlus&apos;s first PTCRB, Wi-Fi Logo, and GCF certifications. I led procurement of conformance test equipment that significantly reduced external certification costs. Every dollar saved was a dollar returned to product development.
-              </p>
-              <p className="text-silver text-base leading-relaxed">
-                At OPPO, I spearheaded the North American product strategy — owning the RFP/RFI process, annual sales plans, and full product line P&L.
-              </p>
-            </div>
-            <div className="space-y-6">
-              <p className="text-steel text-sm leading-relaxed">
-                在 OnePlus 的 5 年 9 个月里，我从零建立并管理了全球运营商产品与技术客户管理部门。我们与全球最大的运营商合作发布产品——<strong className="text-ivory/60">T-Mobile、Verizon、Vodafone、EE、Jio、CMCC</strong>——覆盖美国、欧洲、印度和中国。
-              </p>
-              <p className="text-steel text-sm leading-relaxed">
-                我获得了 OnePlus 的首个 PTCRB、Wi-Fi Logo 和 GCF 认证，主导一致性测试设备采购，显著降低了外部认证成本。省下的每一分钱都回流到了产品开发。
-              </p>
-              <p className="text-steel text-sm leading-relaxed">
-                在 OPPO，我主导北美产品策略——管理 RFP/RFI 流程、年度销售计划和完整的产品线损益。
-              </p>
-            </div>
-          </div>
-
-          {/* Carrier logos / partnerships */}
-          <div className="mt-12 bg-carbon/40 rounded-2xl p-6 border border-white/5">
-            <h4 className="font-display font-semibold text-base text-ivory mb-4">Global Carrier Partnerships <span className="text-steel font-normal text-sm ml-2">全球运营商合作</span></h4>
-            <div className="flex flex-wrap gap-3">
-              {['T-Mobile', 'Verizon', 'Vodafone', 'EE', 'Jio', 'CMCC', 'Sprint', 'KDDI', 'Telefónica O2'].map((name) => (
-                <span key={name} className="px-4 py-2 rounded-lg bg-midnight/60 border border-accent/10 text-silver text-sm font-medium">
-                  {name}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div className="glow-line max-w-5xl mx-auto" />
-
-      {/* Chapter 3: The Transformer */}
-      <section id="transformer" className="px-6 py-20">
-        <div className="max-w-5xl mx-auto">
-          <div className="flex items-center gap-4 mb-8">
-            <span className="text-accent font-mono text-sm">Chapter 03</span>
-            <div className="h-px flex-1 bg-accent/20" />
-          </div>
-          <h2 className="font-display font-bold text-3xl md:text-4xl text-ivory mb-2">
-            The Transformer
-          </h2>
-          <p className="text-steel text-lg mb-10">变革者 — 从传统到 AI Native</p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <div className="space-y-6">
-              <p className="text-silver text-base leading-relaxed">
-                While most organizations are still debating whether to adopt AI tools, I&apos;m already asking a different question: <strong className="text-accent">how do we make AI the central nervous system of the entire enterprise?</strong>
-              </p>
-              <p className="text-silver text-base leading-relaxed">
-                This led to the creation of the <strong className="text-ivory">AIDLC framework</strong> (AI-Driven Development Life Cycle) — a paradigm that replaces linear, friction-heavy human handoffs with AI Agents as central orchestrators, enabling lossless information flow and parallel execution through DAG-based task decomposition.
-              </p>
-              <p className="text-silver text-base leading-relaxed">
-                More importantly, I&apos;m not just theorizing. I have <strong className="text-ivory">5 patent applications filed</strong> that represent concrete technical innovations in AI Agent architecture.
-              </p>
-            </div>
-            <div className="space-y-6">
-              <p className="text-steel text-sm leading-relaxed">
-                当大多数组织还在争论是否要采用 AI 工具时，我已经在思考一个不同的问题：<strong className="text-accent/80">如何让 AI 成为整个企业的中枢神经系统？</strong>
-              </p>
-              <p className="text-steel text-sm leading-relaxed">
-                这催生了 <strong className="text-ivory/60">AIDLC 框架</strong>（AI 驱动的开发生命周期）——一个以 AI Agent 作为中央编排器取代线性人工交接的范式，通过 DAG 任务分解实现无损信息流和并行执行。
-              </p>
-              <p className="text-steel text-sm leading-relaxed">
-                更重要的是，这不仅仅是理论。我已提交 <strong className="text-ivory/60">5 项专利申请</strong>，代表了 AI Agent 架构的具体技术创新。
-              </p>
-            </div>
-          </div>
-
-          {/* Patents */}
-          <div id="patents" className="bg-carbon/40 rounded-2xl p-8 border border-accent/10">
-            <h4 className="font-display font-semibold text-lg text-ivory mb-2">Patent Portfolio <span className="text-steel font-normal text-sm ml-2">专利组合（申请中）</span></h4>
-            <p className="text-steel text-xs mb-6">All patents pending · 所有专利均在申请中</p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {[
-                { icon: '🧪', titleEn: 'AI Testing Agent', titleZh: 'AI 测试代理人', desc: 'Autonomous test execution and quality assurance driven by AI agents.' },
-                { icon: '💻', titleEn: 'AI Development Agent', titleZh: 'AI 研发代理人', desc: 'AI-powered code generation and development workflow orchestration.' },
-                { icon: '🏗️', titleEn: 'AI Test Architect', titleZh: 'AI 测试架构师', desc: 'Intelligent test strategy design and architecture planning.' },
-                { icon: '🚀', titleEn: 'CI/CD Agent Deployment', titleZh: 'CI/CD Agent 部署', desc: 'AI-driven continuous integration and deployment pipeline management.' },
-                { icon: '🔗', titleEn: 'Multi-Agent Collaboration', titleZh: 'Multi-Agent 协作管理', desc: 'Orchestration framework for multiple AI agents working in coordination.' },
-              ].map((p) => (
-                <div key={p.titleEn} className="bg-midnight/40 rounded-xl p-5 border border-accent/5 hover:border-accent/20 transition-colors">
-                  <span className="text-xl">{p.icon}</span>
-                  <h5 className="font-display font-semibold text-sm text-ivory mt-2">{p.titleEn}</h5>
-                  <p className="text-accent/60 text-xs">{p.titleZh}</p>
-                  <p className="text-steel text-xs mt-2 leading-relaxed">{p.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div className="glow-line max-w-5xl mx-auto" />
-
-      {/* SW Monetization */}
-      <section id="monetization" className="px-6 py-20">
-        <div className="max-w-5xl mx-auto">
-          <div className="flex items-center gap-4 mb-8">
-            <span className="text-accent font-mono text-sm">Chapter 04</span>
-            <div className="h-px flex-1 bg-accent/20" />
-          </div>
-          <h2 className="font-display font-bold text-3xl md:text-4xl text-ivory mb-2">
-            The Strategist
-          </h2>
-          <p className="text-steel text-lg mb-10">策略家 — 软件营收与商业思维</p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <div className="space-y-6">
-              <p className="text-silver text-base leading-relaxed">
-                Technology leadership without business impact is incomplete. At Nothing, I own the <strong className="text-ivory">full SW P&L</strong> — building and managing the software monetization strategy for Nothing OS. This includes pre-install partnerships, advertising integration, and a subscription service model currently in development.
-              </p>
-              <p className="text-silver text-base leading-relaxed">
-                Profit isn&apos;t just about revenue — it&apos;s about discipline. Through rigorous budgeting, vendor negotiation, and team efficiency optimization, I&apos;ve delivered measurable profit gains while scaling the team from zero to 150+.
-              </p>
-            </div>
-            <div className="space-y-6">
-              <p className="text-steel text-sm leading-relaxed">
-                没有商业影响力的技术领导力是不完整的。在 Nothing，我拥有<strong className="text-ivory/60">完整的软件损益管理权</strong>——构建并管理 Nothing OS 的软件变现策略，包括预装合作、广告整合，以及正在开发中的订阅服务模式。
-              </p>
-              <p className="text-steel text-sm leading-relaxed">
-                利润不仅仅是营收——更是纪律。通过严格的预算管理、供应商谈判和团队效率优化，我在将团队从零扩展到 150+ 人的同时，实现了可量化的利润增长。
-              </p>
-            </div>
-          </div>
-
-          {/* Revenue streams */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {[
-              { icon: '📦', titleEn: 'Pre-install Partnerships', titleZh: '预装合作', status: 'Active', desc: 'Strategic app pre-installation agreements driving recurring revenue.' },
-              { icon: '📊', titleEn: 'Advertising Integration', titleZh: '广告整合', status: 'Active', desc: 'In-OS advertising placements with privacy-first approach.' },
-              { icon: '⭐', titleEn: 'Subscription Services', titleZh: '订阅服务', status: 'In Development', desc: 'Premium subscription model for enhanced Nothing OS features.' },
-            ].map((r) => (
-              <div key={r.titleEn} className="bg-carbon/40 rounded-xl p-6 border border-white/5">
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-xl">{r.icon}</span>
-                  <span className={`text-[10px] font-mono px-2 py-0.5 rounded-full ${r.status === 'Active' ? 'bg-accent/10 text-accent' : 'bg-warm/10 text-warm'}`}>
-                    {r.status}
-                  </span>
-                </div>
-                <h5 className="font-display font-semibold text-sm text-ivory">{r.titleEn}</h5>
-                <p className="text-accent/60 text-xs">{r.titleZh}</p>
-                <p className="text-steel text-xs mt-2 leading-relaxed">{r.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
-
-      <div className="glow-line max-w-5xl mx-auto" />
 
       {/* Education */}
-      <section className="px-6 py-16">
+      <section className="px-6 py-16 border-t border-white/5">
         <div className="max-w-5xl mx-auto">
-          <h2 className="font-display font-bold text-2xl text-ivory mb-8">
-            Education <span className="text-steel text-lg font-normal ml-2">教育背景</span>
-          </h2>
+          <h2 className="font-display font-bold text-2xl md:text-3xl text-ivory mb-8">{c.eduTitle}</h2>
           <div className="bg-carbon/40 rounded-2xl p-8 border border-white/5">
-            <h3 className="font-display font-bold text-lg text-ivory">National Taiwan University of Science and Technology</h3>
-            <p className="text-steel text-sm mt-1">台湾科技大学</p>
-            <p className="text-accent text-sm font-medium mt-2">Master of Electronic and Computer Engineering</p>
-            <p className="text-steel text-xs mt-1">Research: Hybrid Evolutionary Algorithm for Multi-radio, Multi-channel Wireless Mesh Networks</p>
+            <h3 className="font-display font-bold text-lg text-ivory">{c.eduSchool}</h3>
+            <p className="text-accent text-sm font-medium mt-2">{c.eduDegree}</p>
+            <p className="text-steel text-xs mt-1">{c.eduResearch}</p>
           </div>
         </div>
       </section>
@@ -292,16 +194,9 @@ export default function AboutPage() {
       {/* CTA */}
       <section className="px-6 py-24">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-display font-bold text-3xl text-ivory mb-6">The Next Chapter</h2>
-          <p className="text-silver text-lg mb-4">
-            I&apos;m looking for the next challenge — an organization that needs a leader who can build teams, drive P&L, and lead AI-native transformation at scale.
-          </p>
-          <p className="text-steel text-base mb-10">
-            我正在寻找下一个挑战——一个需要能建团队、管损益、并大规模推动 AI Native 转型的领导者的组织。
-          </p>
-          <a href="https://www.linkedin.com/in/sam-lee-087a2579/" target="_blank" rel="noopener noreferrer" className="inline-block px-10 py-4 rounded-xl bg-accent text-midnight font-display font-semibold tracking-wide hover:bg-accent-glow transition-all hover:shadow-[0_0_30px_rgba(0,212,170,0.3)]">
-            Connect on LinkedIn
-          </a>
+          <h2 className="font-display font-bold text-3xl text-ivory mb-6">{c.ctaTitle}</h2>
+          <p className="text-silver text-lg mb-10">{c.ctaSub}</p>
+          <a href="https://www.linkedin.com/in/sam-lee-087a2579/" target="_blank" rel="noopener noreferrer" className="inline-block px-10 py-4 rounded-xl bg-accent text-midnight font-display font-semibold tracking-wide hover:bg-accent-glow transition-all hover:shadow-[0_0_30px_rgba(0,212,170,0.3)]">{c.ctaBtn}</a>
         </div>
       </section>
     </div>
