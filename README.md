@@ -1,70 +1,33 @@
-# 我的个人博客
+# Sam Lee — AI Native Enterprise Transformation Blog
 
-一个简洁、现代化的个人博客网站。
+A personal blog and thought leadership platform focused on **AIDLC (AI-Driven Development Life Cycle)** and AI Native enterprise governance.
 
-## 功能特点
+## Tech Stack
 
-- 响应式设计，适配移动端和桌面端
-- 简洁优雅的界面
-- 博客文章展示
-- 关于我页面
-- 联系方式
+- **Framework**: Next.js 14 (App Router)
+- **Styling**: Tailwind CSS
+- **Language**: TypeScript
+- **Deployment**: Vercel
 
-## 使用方法
+## Getting Started
 
-1. 直接在浏览器中打开 `index.html` 文件即可查看博客
-2. 你可以修改 HTML 文件中的个人信息和博客内容
-3. 在 `style.css` 中自定义样式和颜色
-
-## 自定义内容
-
-### 修改个人信息
-
-在 `index.html` 中找到以下部分并修改：
-
-- **博客标题**: 修改 `<h1 class="logo">` 中的文字
-- **关于我**: 修改 `<section id="about">` 中的内容
-- **联系方式**: 修改 `<section id="contact">` 中的邮箱、GitHub等信息
-
-### 添加博客文章
-
-复制 `<article class="blog-card">` 块并修改其中的内容：
-- 标题
-- 日期
-- 简介
-- 链接
-
-### 修改样式
-
-在 `style.css` 中可以自定义：
-- 配色方案
-- 字体
-- 布局间距
-- 动画效果
-
-## 文件结构
-
-```
-blog/
-├── index.html      # 主页面
-├── style.css       # 样式文件
-└── README.md       # 说明文档
+```bash
+npm install
+npm run dev
 ```
 
-## 下一步建议
+Open [http://localhost:3000](http://localhost:3000).
 
-1. 添加 JavaScript 实现更多交互功能
-2. 创建独立的博客文章页面
-3. 添加图片资源
-4. 集成评论系统
-5. 部署到 GitHub Pages 或其他托管平台
+## Pages
 
-## 部署
+- **Home** — Hero, content pillars, and credibility stats
+- **About** — Professional background and mission
+- **AIDLC** — Framework overview, process comparison, and governance methodology
 
-可以将此博客部署到：
-- GitHub Pages
-- Netlify
-- Vercel
-- 或任何静态网站托管服务
+## Deploy
 
-祝你使用愉快！
+Connect this repo to [Vercel](https://vercel.com) for automatic deployments.
+
+---
+
+© 2026 Sam Lee. All rights reserved.
