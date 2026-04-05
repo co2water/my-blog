@@ -26,9 +26,9 @@ module.exports = {
         mono: ['JetBrains Mono', 'monospace'],
       },
       animation: {
-        'fade-up': 'fadeUp 0.8s ease-out forwards',
-        'fade-in': 'fadeIn 1s ease-out forwards',
-        'slide-right': 'slideRight 0.6s ease-out forwards',
+        'fade-up': 'fadeUp 0.8s ease-out both',
+        'fade-in': 'fadeIn 1s ease-out both',
+        'slide-right': 'slideRight 0.6s ease-out both',
         'pulse-glow': 'pulseGlow 3s ease-in-out infinite',
         'float': 'float 6s ease-in-out infinite',
       },

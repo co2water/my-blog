@@ -42,14 +42,14 @@ export default function HomePage() {
       <section className="min-h-screen flex items-center justify-center px-6 pt-16">
         <div className="max-w-5xl mx-auto text-center">
           {/* Overline */}
-          <div className="animate-fade-in opacity-0 mb-6">
+          <div className="animate-fade-in mb-6">
             <span className="inline-block px-4 py-1.5 rounded-full border border-accent/30 text-accent text-xs font-mono tracking-widest uppercase">
               AI Native Enterprise Transformation
             </span>
           </div>
 
           {/* Main Heading */}
-          <h1 className="animate-fade-up opacity-0 font-display font-extrabold text-5xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight mb-8">
+          <h1 className="animate-fade-up font-display font-extrabold text-5xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight mb-8">
             <span className="text-ivory">Rethink How</span>
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-accent-glow to-accent">
@@ -60,19 +60,19 @@ export default function HomePage() {
           </h1>
 
           {/* Subtitle */}
-          <p className="animate-fade-up opacity-0 stagger-2 max-w-2xl mx-auto text-silver text-lg md:text-xl leading-relaxed mb-4">
+          <p className="animate-fade-up stagger-2 max-w-2xl mx-auto text-silver text-lg md:text-xl leading-relaxed mb-4">
             From human-centric friction to AI-driven flow.
             <br />
             Introducing <strong className="text-accent font-semibold">AIDLC</strong> — the framework for AI Native enterprise governance.
           </p>
-          <p className="animate-fade-up opacity-0 stagger-3 max-w-2xl mx-auto text-steel text-base leading-relaxed mb-12">
+          <p className="animate-fade-up stagger-3 max-w-2xl mx-auto text-steel text-base leading-relaxed mb-12">
             从人为驱动的高摩擦流程，迈向 AI 原生的无缝协作。
             <br />
             <strong className="text-accent/80">AIDLC</strong> —— AI Native 企业治理框架。
           </p>
 
           {/* CTAs */}
-          <div className="animate-fade-up opacity-0 stagger-4 flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="animate-fade-up stagger-4 flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/aidlc"
               className="px-8 py-3.5 rounded-xl bg-accent text-midnight font-display font-semibold text-sm tracking-wide hover:bg-accent-glow transition-all hover:shadow-[0_0_30px_rgba(0,212,170,0.3)]"
@@ -88,7 +88,7 @@ export default function HomePage() {
           </div>
 
           {/* Scroll indicator */}
-          <div className="animate-fade-in opacity-0 stagger-6 mt-20">
+          <div className="animate-fade-in stagger-6 mt-20">
             <div className="w-px h-16 bg-gradient-to-b from-transparent via-accent/40 to-transparent mx-auto" />
           </div>
         </div>
