@@ -19,9 +19,11 @@ const t = {
     ch2p3: 'Then at OPPO, I spearheaded the North American product strategy — managing RFP/RFI processes, annual sales plans, and full product line P&L.',
     ch3title: 'The Transformer',
     ch3period: '2022 – Present',
-    ch3p1: 'At Nothing, I wear two hats: Head of Mobile SW and TW General Manager. I built the entire Mobile SW organization from the ground up — 150+ people across in-house (100+) and outsourced (50+) teams, spanning Android application development, AWS cloud infrastructure management, and CI/CD pipeline operations.',
+    ch3p1: 'At Nothing, I wear two hats: Head of Mobile SW and TW General Manager. I built the entire Mobile SW organization from the ground up — 150+ people across in-house (100+) and outsourced (50+) teams. The scope extends beyond smartphones: my team covers Android phone development, Nothing Ear and smartwatch companion app development, AWS cloud infrastructure management, and CI/CD pipeline operations.',
     ch3p2: 'On the infrastructure side, I established a dual-track engineering system: Gerrit + Jenkins for on-premise builds and GitHub + AWS for cloud-side deployment — giving the team both the stability of traditional workflows and the agility of modern DevOps.',
     ch3p3: 'On the revenue side, I built Nothing OS software monetization from zero — creating revenue streams through pre-install partnerships, advertising integration, and subscription services (upcoming). Full P&L ownership with measurable profit delivery.',
+    ch3p6: 'On the data and compliance side, I lead the company\'s data analytics team — building tools for sales data analysis, product user persona profiling, and product quality data monitoring. Beyond analytics, I also own software data compliance, ensuring all data collection practices meet EU GDPR, U.S. privacy regulations, and other regional compliance requirements across our global markets.',
+    ch3p5: 'On the manufacturing side, I bring deep expertise in factory-floor operations — understanding how production software operates at each station, the tooling that powers the assembly line, and how MES (Manufacturing Execution System) data integrates with individual workstations. I manage the full ODM/JDM collaboration lifecycle, ensuring software quality from prototype through mass production ramp-up.',
     ch3p4: 'But the real transformation is happening now. While most enterprises debate "should we use AI?", I\'m asking a different question: "How do we make AI the central nervous system of the entire development lifecycle?" This led to the creation of the AIDLC framework, 5 AI Agent patent applications, and a fundamental rethinking of how teams, tools, and processes interconnect.',
     patentsTitle: 'AI Agent Patent Portfolio',
     patentsSub: 'All patents pending',
@@ -50,9 +52,11 @@ const t = {
     ch2p3: '随后在 OPPO 主导北美产品策略——管理 RFP/RFI 流程、年度销售计划及完整产品线损益。',
     ch3title: '变革者',
     ch3period: '2022 – 至今',
-    ch3p1: '在 Nothing，我身兼 Mobile SW 负责人与台湾总经理双重角色。从零建立了 150+ 人的组织——涵盖 Android 开发、AWS 云基础设施管理和 CI/CD 流水线运维（内部 100+，外包 50+）。',
+    ch3p1: '在 Nothing，我身兼 Mobile SW 负责人与台湾总经理双重角色。从零建立了 150+ 人的组织（内部 100+，外包 50+）。团队范围超越智能手机：涵盖 Android 手机开发、Nothing Ear 及智能手表的配套应用开发、AWS 云基础设施管理和 CI/CD 流水线运维。',
     ch3p2: '在基础设施层面，我建立了双轨工程系统：Gerrit + Jenkins（本地构建）与 GitHub + AWS（云端部署）——兼顾传统工作流的稳定性和现代 DevOps 的敏捷性。',
     ch3p3: '在营收层面，我从零构建了 Nothing OS 的软件变现体系——包含预装合作、广告整合和即将上线的订阅服务。完整的损益管理责任与可衡量的利润交付。',
+    ch3p6: '在数据与合规层面，我带领公司数据分析团队——搭建销售数据分析、产品用户画像分析及产品品质数据监控等工具。除数据分析外，我还负责软件数据合规，确保所有数据收集实践符合欧盟 GDPR、美国隐私法规及全球各市场的区域合规要求。',
+    ch3p5: '在生产制造层面，我深入掌握工厂端运作——了解生产软件在每个工站上的作用、驱动产线运转的工具链，以及 MES（制造执行系统）数据与各工站之间的集成关系。我管理完整的 ODM/JDM 合作生命周期，确保软件质量从原型阶段贯穿到量产爬坡。',
     ch3p4: '而真正的变革正在发生。当大多数企业还在讨论"要不要用 AI"时，我在思考一个不同的问题："如何让 AI 成为整个开发生命周期的中枢神经系统？"这催生了 AIDLC 框架、5 项 AI Agent 专利申请，以及对团队、工具和流程如何互联的根本性重新思考。',
     patentsTitle: 'AI Agent 专利组合',
     patentsSub: '全部专利申请中',
@@ -151,6 +155,8 @@ export default function AboutPage() {
             <p className="text-silver text-base leading-relaxed mb-6">{c.ch3p1}</p>
             <p className="text-silver text-base leading-relaxed mb-6">{c.ch3p2}</p>
             <p className="text-silver text-base leading-relaxed mb-6">{c.ch3p3}</p>
+            <p className="text-silver text-base leading-relaxed mb-6">{c.ch3p6}</p>
+            <p className="text-silver text-base leading-relaxed mb-6">{c.ch3p5}</p>
             <p className="text-silver text-base leading-relaxed">{c.ch3p4}</p>
           </div>
         </div>

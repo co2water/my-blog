@@ -6,8 +6,8 @@ import { useLang } from '@/components/LangContext'
 const pillars = [
   {
     icon: '👥',
-    en: { title: 'Team & Organization Building', desc: 'Built and managed 150+ members (100+ in-house, 50+ outsourced) spanning Android development, AWS infrastructure, and CI/CD pipeline operations across Shenzhen and Taiwan.' },
-    zh: { title: '团队管理与组织建设', desc: '从零建立并管理 150+ 人团队（内部 100+，外包 50+），涵盖 Android 开发、AWS 基础设施运维及 CI/CD 流水线，横跨深圳与台湾。' },
+    en: { title: 'Team & Organization Building', desc: 'Built and managed 150+ members (100+ in-house, 50+ outsourced) spanning Android phone development, Nothing Ear & smartwatch apps, AWS infrastructure, CI/CD operations, and data analytics across Shenzhen and Taiwan.' },
+    zh: { title: '团队管理与组织建设', desc: '从零建立并管理 150+ 人团队（内部 100+，外包 50+），涵盖 Android 手机开发、Nothing Ear 及智能手表应用、AWS 基础设施、CI/CD 运维及数据分析，横跨深圳与台湾。' },
     href: '/about#chapter-builder',
   },
   {
@@ -30,30 +30,30 @@ const pillars = [
   },
   {
     icon: '💰',
-    en: { title: 'SW Monetization & P&L', desc: 'Driving software revenue through pre-install partnerships, advertising integration, and subscription services. Full P&L ownership with proven profit delivery.' },
-    zh: { title: '软件营收与 P&L 管理', desc: '通过预装合作、广告整合及订阅服务驱动软件营收。完整的损益管理责任与利润交付实绩。' },
+    en: { title: 'SW Monetization, Data & Compliance', desc: 'Driving software revenue through pre-install, advertising, and subscription. Leading data analytics for sales, user personas, and quality. Ensuring GDPR and global data compliance.' },
+    zh: { title: '软件营收、数据与合规', desc: '通过预装、广告及订阅驱动软件营收。带领数据分析团队进行销售、用户画像及品质监控。确保 GDPR 及全球数据合规。' },
     href: '/about#chapter-scaler',
   },
   {
     icon: '🌏',
-    en: { title: 'Global Product Launch', desc: 'Launched products with T-Mobile, Verizon, Vodafone, EE, Jio, and CMCC across NA, EU, India, and China. Expert in carrier certification and cost optimization.' },
-    zh: { title: '全球产品发布与运营商策略', desc: '与 T-Mobile、Verizon、Vodafone 等全球顶级运营商合作发布产品，精通认证体系与降本增效。' },
-    href: '/about#chapter-scaler',
+    en: { title: 'Global Launch & Manufacturing', desc: 'End-to-end product delivery — from factory floor production software, station-level tooling, and MES system integration, through ODM/JDM management, to carrier launches with T-Mobile, Verizon, Vodafone across 4 markets.' },
+    zh: { title: '全球发布与生产制造管理', desc: '端到端产品交付——从工厂产线生产软件、工站级工具、MES 系统集成，到 ODM/JDM 管理，再到与 T-Mobile、Verizon、Vodafone 等运营商在四大市场的产品发布。' },
+    href: '/about#chapter-transformer',
   },
 ]
 
 const stats = {
   en: [
     { value: '150+', label: 'Team Members' },
-    { value: '6+', label: 'Product Launches' },
-    { value: '3', label: 'Continents' },
+    { value: '20+', label: 'Product Launches' },
+    { value: '4', label: 'Markets (CN/IN/EU/US)' },
     { value: '15+', label: 'Years Experience' },
     { value: '5', label: 'Patents Pending' },
   ],
   zh: [
     { value: '150+', label: '人团队管理' },
-    { value: '6+', label: '款产品成功发布' },
-    { value: '3', label: '大洲市场覆盖' },
+    { value: '20+', label: '款产品成功发布' },
+    { value: '4', label: '大市场（中/印/欧/美）' },
     { value: '15+', label: '年行业经验' },
     { value: '5', label: '项专利申请中' },
   ],
