@@ -8,11 +8,13 @@ const navItems = {
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
     { href: '/aidlc', label: 'AIDLC' },
+    { href: '/insights', label: 'Insights' },
   ],
   zh: [
     { href: '/', label: '首页' },
     { href: '/about', label: '关于' },
-    { href: '/aidlc', label: 'AIDLC 框架' },
+    { href: '/aidlc', label: 'AIDLC' },
+    { href: '/insights', label: '观点' },
   ],
 }
 
@@ -23,7 +25,6 @@ export default function Navigation() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-midnight/80 border-b border-white/5">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
           <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-accent to-accent-dim flex items-center justify-center font-display font-bold text-midnight text-sm">
             SL
@@ -33,7 +34,6 @@ export default function Navigation() {
           </span>
         </Link>
 
-        {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
           {navItems[lang].map((item) => (
             <Link
@@ -44,8 +44,6 @@ export default function Navigation() {
               {item.label}
             </Link>
           ))}
-
-          {/* Language Toggle */}
           <button
             onClick={() => setLang(lang === 'en' ? 'zh' : 'en')}
             className="ml-4 px-3 py-1.5 rounded-full border border-slate text-steel text-xs font-mono hover:border-accent hover:text-accent transition-all"
@@ -54,7 +52,6 @@ export default function Navigation() {
           </button>
         </div>
 
-        {/* Mobile Menu Button */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="md:hidden flex flex-col gap-1.5 p-2"
@@ -65,7 +62,6 @@ export default function Navigation() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden bg-carbon/95 backdrop-blur-xl border-t border-white/5 px-6 py-6 space-y-4">
           {navItems[lang].map((item) => (
