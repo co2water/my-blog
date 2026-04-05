@@ -25,9 +25,9 @@ const t = {
     afterParDesc: 'DAG decomposes tasks for simultaneous execution across multiple Claude Code instances.',
     govTitle: 'AI Native Governance: 5 Steps',
     principlesTitle: 'AIDLC Core Principles',
-    ctaTitle: 'Transform Your Organization',
-    ctaSub: 'Ready to implement AIDLC in your enterprise? Let\'s start the conversation.',
-    ctaBtn: 'Connect with Sam Lee',
+    ctaTitle: 'Bring AIDLC to Your Organization',
+    ctaSub: 'I help enterprises implement the AIDLC framework — from AI literacy programs to full AI Agent deployment. Let\'s design your transformation roadmap.',
+    ctaBtn: 'Discuss Your Transformation',
   },
   zh: {
     badge: '框架',
@@ -51,9 +51,9 @@ const t = {
     afterParDesc: 'DAG 分解任务，多个 Claude Code 实例同时并行执行。',
     govTitle: 'AI Native 企业治理五步法',
     principlesTitle: 'AIDLC 核心原则',
-    ctaTitle: '转型您的组织',
-    ctaSub: '准备好在您的企业中实施 AIDLC 了吗？让我们开始对话。',
-    ctaBtn: '联系 Sam Lee',
+    ctaTitle: '将 AIDLC 引入您的组织',
+    ctaSub: '我帮助企业实施 AIDLC 框架——从 AI 素养培训到完整的 AI Agent 部署。让我们一起设计您的转型路线图。',
+    ctaBtn: '探讨您的转型方案',
   },
 }
 

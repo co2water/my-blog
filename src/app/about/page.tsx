@@ -31,8 +31,8 @@ const t = {
     eduDegree: 'Master of Electronic and Computer Engineering',
     eduResearch: 'Research: Hybrid Evolutionary Algorithm for Multi-radio, Multi-channel Wireless Mesh Networks',
     ctaTitle: 'The Next Chapter',
-    ctaSub: 'From builder to scaler to transformer — the journey continues. Let\'s write the next chapter together.',
-    ctaBtn: 'Connect with Sam Lee',
+    ctaSub: 'From builder to scaler to transformer — now I help enterprises write their own transformation story. Let\'s explore how AI can reshape your organization.',
+    ctaBtn: 'Schedule a Consultation',
   },
   zh: {
     badge: '我的故事',
@@ -62,8 +62,8 @@ const t = {
     eduDegree: '电子与计算机工程硕士',
     eduResearch: '研究方向：多无线电多信道无线网状网络中的混合进化算法',
     ctaTitle: '下一章',
-    ctaSub: '从建设者到扩展者再到变革者——旅程仍在继续。让我们一起书写下一章。',
-    ctaBtn: '联系 Sam Lee',
+    ctaSub: '从建设者到扩展者再到变革者——现在我帮助企业书写自己的转型故事。让我们一起探索 AI 如何重塑您的组织。',
+    ctaBtn: '预约咨询',
   },
 }
 

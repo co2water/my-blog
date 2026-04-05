@@ -61,7 +61,7 @@ const stats = {
 
 const t = {
   en: {
-    badge: 'Technology Executive × AI Strategy Leader',
+    badge: 'AI Transformation Advisor × Technology Executive',
     h1a: 'Build Teams.',
     h1b: 'Ship Products.',
     h1c: 'Transform with AI.',
@@ -69,12 +69,12 @@ const t = {
     cta1: 'My Story →',
     cta2: 'Explore AIDLC',
     pillarsTitle: 'Six Pillars of Leadership',
-    ctaTitle: "Let's Connect",
-    ctaSub: 'Looking for a technology executive who builds teams, drives revenue, and leads AI transformation?',
-    ctaBtn: 'Connect on LinkedIn',
+    ctaTitle: 'Ready to Go AI Native?',
+    ctaSub: 'Whether you\'re exploring AI transformation strategy, building AI Agents for your organization, or rethinking your development lifecycle — I help enterprises navigate the shift from traditional operations to AI-native execution.',
+    ctaBtn: 'Start a Conversation',
   },
   zh: {
-    badge: '技术高管 × AI 战略领袖',
+    badge: 'AI 转型顾问 × 技术高管',
     h1a: '建团队。',
     h1b: '出产品。',
     h1c: 'AI 驱动转型。',
@@ -82,9 +82,9 @@ const t = {
     cta1: '我的故事 →',
     cta2: '探索 AIDLC',
     pillarsTitle: '领导力六大支柱',
-    ctaTitle: '联系我',
-    ctaSub: '寻找能建团队、驱动营收、引领 AI 转型的技术高管？',
-    ctaBtn: '通过 LinkedIn 联系',
+    ctaTitle: '准备好迈向 AI Native 了吗？',
+    ctaSub: '无论您正在探索 AI 转型战略、为组织搭建 AI Agent，还是重新思考开发生命周期——我帮助企业从传统运营迈向 AI 原生执行模式。',
+    ctaBtn: '开始对话',
   },
 }
 
